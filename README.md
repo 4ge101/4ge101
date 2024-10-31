@@ -4,9 +4,9 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=4ge101&label=Profile%20views&color=0e75b6&style=flat" alt="4ge101" /> </p>
 
-- 🔭 I’m currently working on [school website](https://4ge101.github.io/school_website/)
+- 🔭 I’m currently working on [anime website](https://4ge101.github.io/Anime_Website/)
 
-- 🌱 I’m currently learning **HTML,CSS,JS**
+- 🌱 I’m currently learning **tS**
 
 - 📫 How to reach me **theforgettenone2@gmail.com**
 
