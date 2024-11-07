@@ -1,8 +1,8 @@
 <h1 align="center">Hi 👋, I'm Ali Sami</h1>
 <h3 align="center">A passionate frontend developer from Nepal</h3>
-<img width="400" src="https://i.pinimg.com/originals/f1/e7/34/f1e734f9cade86fe737a9aa404ad5677.gif" alt="gif">
+<img width="100%" src="https://i.pinimg.com/originals/f1/e7/34/f1e734f9cade86fe737a9aa404ad5677.gif" alt="gif">
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=4ge101&label=Profile%20views&color=0e75b6&style=flat" alt="4ge101" style="width: 100%;" /> </p>
+<p align="left"> <img src="https://komarev.com/ghpvc/?username=4ge101&label=Profile%20views&color=0e75b6&style=flat" alt="4ge101" /> </p>
 
 - 🔭 I’m currently working on []()
 
