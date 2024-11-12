@@ -1,7 +1,7 @@
-https://mir-s3-cdn-cf.behance.net/project_modules/fs/54b6c068097599.5b50bca476b9b.gif
+<img width="100%" src="https://mir-s3-cdn-cf.behance.net/project_modules/fs/54b6c068097599.5b50bca476b9b.gif" alt="gif">
 <h1 align="center">Hi 👋, I'm Ali Sami</h1>
 <h3 align="center">A passionate frontend developer from Nepal</h3>
-<img width="100%" src="https://media4.giphy.com/media/jTNG3RF6EwbkpD4LZx/giphy.gif?cid=6c09b952entewartdlzo8pr6ct1avw2buca1bl6olqgg04yv&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g" alt="gif">
+<img align="right" src="https://media4.giphy.com/media/jTNG3RF6EwbkpD4LZx/giphy.gif?cid=6c09b952entewartdlzo8pr6ct1avw2buca1bl6olqgg04yv&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g" alt="gif">
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=4ge101&label=Profile%20views&color=0e75b6&style=flat" alt="4ge101" /> </p>
 
