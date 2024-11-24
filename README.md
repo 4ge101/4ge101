@@ -3,7 +3,7 @@
 <h3 align="center">A passionate frontend developer from Nepal</h3>
 <img align="right" src="https://media4.giphy.com/media/jTNG3RF6EwbkpD4LZx/giphy.gif?cid=6c09b952entewartdlzo8pr6ct1avw2buca1bl6olqgg04yv&ep=v1_internal_gif_by_id&rid=giphy.gif&ct=g" alt="gif">
 
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=4ge101&label=Profile%20views&color=0e75b6&style=flat" alt="4ge101" /> </p>
+<p align="left"> <img src="https://images.squarespace-cdn.com/content/v1/56af9236b6aa60cdf1c52b4b/1464950341113-VN4PQR9DU6LSKDIVHPGI/image-asset.gif" alt="4ge101" /> </p>
 
 - 🔭 I’m currently working on [school website](https://4ge101.github.io/school_website/)
 
