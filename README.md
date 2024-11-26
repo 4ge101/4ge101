@@ -1,4 +1,4 @@
-<img width="100%" src="https://user-images.githubusercontent.com/106918656/209438619-25091cdf-a126-4e95-a24c-5efdf8057606.gif" alt="gif">
+<img width="100%" src="https://user-images.githubusercontent.com/4640988/183808229-c6b3bf61-ee42-489b-a4e1-fdf5e50094a7.gif" alt="gif">
 <h1 align="center">Hi 👋, I'm Ali Sami</h1>
 <h3 align="center">A passionate frontend developer from Nepal</h3>
 <img align="right" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTl1aHNldGZjcmVyN2J6bjVjMThmMTB6NTllbTN6ZnVlNHk0Y2ZwbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jBOOXxSJfG8kqMxT11/giphy.webp" alt="gif">
