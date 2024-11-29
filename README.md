@@ -1,7 +1,6 @@
 <img width="100%" src="https://user-images.githubusercontent.com/106918656/209438619-25091cdf-a126-4e95-a24c-5efdf8057606.gif" alt="gif">
 <h1 align="center">Hi 👋, I'm Ali Sami</h1>
 <h3 align="center">A passionate frontend developer from Nepal</h3>
-<img align="right" src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExYTl1aHNldGZjcmVyN2J6bjVjMThmMTB6NTllbTN6ZnVlNHk0Y2ZwbiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/jBOOXxSJfG8kqMxT11/giphy.webp" alt="gif">
 
 <p align="left"> <img src="https://images.squarespace-cdn.com/content/v1/56af9236b6aa60cdf1c52b4b/1464950341113-VN4PQR9DU6LSKDIVHPGI/image-asset.gif" alt="4ge101" /> </p>
 
