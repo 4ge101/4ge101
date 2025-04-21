@@ -14,6 +14,8 @@
 
 - ⚡ Fun fact **I think I am funny**
 
+<img style="width: 70%;" src="https://user-images.githubusercontent.com/74038190/218265814-3084a4ba-809c-4135-afc0-8685d0f634b3.gif"></img>
+
 <h3 align="left">Connect with me:</h3>
 <p align="left">
 <a href="https://fb.com/md sami" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/facebook.svg" alt="md sami" height="30" width="40" /></a>
