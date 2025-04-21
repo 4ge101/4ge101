@@ -4,6 +4,8 @@
 
 <p align="left"> <img src="https://images.squarespace-cdn.com/content/v1/56af9236b6aa60cdf1c52b4b/1464950341113-VN4PQR9DU6LSKDIVHPGI/image-asset.gif" alt="4ge101" /> </p>
 
+<img align="right" width="400" src="https://user-images.githubusercontent.com/74038190/218265814-3084a4ba-809c-4135-afc0-8685d0f634b3.gif">
+
 - 🔭 I’m currently working on [school website](https://4ge101.github.io/school_website/)
 
 - 🌱 I’m currently learning **TS,React**
@@ -13,8 +15,6 @@
 - 📫 How to reach me **theforgettenone2@gmail.com**
 
 - ⚡ Fun fact **I think I am funny**
-
-<img style="width: 70%;" src="https://user-images.githubusercontent.com/74038190/218265814-3084a4ba-809c-4135-afc0-8685d0f634b3.gif"></img>
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
