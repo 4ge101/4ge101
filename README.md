@@ -10,7 +10,7 @@
 
 - 🌱 I’m currently learning **TS,React**
 
-- 👨‍💻 All of my projects are available at [https://mohammadsamiali.netlify.app/](https://alisami.netlify.app/)
+- 👨‍💻 All of my projects are available at [https://alisami.netlify.app/](https://alisami.netlify.app/)
 
 - 📫 How to reach me **theforgettenone2@gmail.com**
 
