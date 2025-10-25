@@ -6,11 +6,11 @@
 
 <img align="right" width="400" src="https://user-images.githubusercontent.com/74038190/218265814-3084a4ba-809c-4135-afc0-8685d0f634b3.gif">
 
-- 🔭 I’m currently working on [school website](https://4ge101.github.io/school_website/)
+- 🔭 I’m currently working on [Embedded System]()
 
 - 🌱 I’m currently learning **TS,React**
 
-- 👨‍💻 All of my projects are available at [https://mohammadsamiali.netlify.app/](https://mohammadsamiali.netlify.app/)
+- 👨‍💻 All of my projects are available at [https://mohammadsamiali.netlify.app/](https://alisami.netlify.app/)
 
 - 📫 How to reach me **theforgettenone2@gmail.com**
 
