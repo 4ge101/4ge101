@@ -8,7 +8,7 @@
 
 - 🔭 I’m currently working on [Embedded System]()
 
-- 🌱 I’m currently learning **TS,React**
+- 🌱 I’m currently learning **Rust**
 
 - 👨‍💻 All of my projects are available at [https://mesamiali.netlify.app/](https://mesamiali.netlify.app/)
 
