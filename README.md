@@ -12,7 +12,7 @@
 - 🔭 I’m currently working on **Embedded Systems**
 - 🌱 I’m currently learning **Rust**
 - 👨‍💻 All of my projects are available at  
-  🌐 https://mesamiali.netlify.app/
+  🌐 https:/alixsami.netlify.app/
 - 📫 Reach me at **theforgettenone2@gmail.com**
 - ⚡ Fun fact: _I think I am funny_ 😆
 
