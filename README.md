@@ -14,7 +14,7 @@
 - 👨‍💻 All of my projects are available at  
   🌐 https:/alixsami.netlify.app/
 - 📫 Reach me at **theforgettenone2@gmail.com**
-- ⚡ Fun fact: _I think I am funny_ 😆
+- ⚡ Fun fact: I am just 14
 
 ---
 
