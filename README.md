@@ -12,7 +12,7 @@
 - 🔭 I’m currently working on **Embedded Systems**
 - 🌱 I’m currently learning **Rust**
 - 👨‍💻 All of my projects are available at  
-  🌐 https:/alixsami.netlify.app/
+  🌐 https:/alixsami.com/
 - 📫 Reach me at **theforgettenone2@gmail.com**
 - ⚡ Fun fact: I am just 14
 
