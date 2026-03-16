@@ -13,7 +13,7 @@
 - 🌱 I’m currently learning **Rust**
 - 👨‍💻 All of my projects are available at  
   🌐 https:/alixsami.com/
-- 📫 Reach me at **theforgettenone2@gmail.com**
+- 📫 Reach me at **contact@AlixSami.com**
 - ⚡ Fun fact: I am just 14
 
 ---
