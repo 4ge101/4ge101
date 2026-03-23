@@ -1,7 +1,7 @@
 <img width="100%" src="https://user-images.githubusercontent.com/106918656/209438619-25091cdf-a126-4e95-a24c-5efdf8057606.gif" alt="gif">
 
 <h1 align="center">Hi 👋, I'm Ali Sami</h1>
-<h3 align="center">A passionate developer from Nepal 🇳🇵</h3>
+<h3 align="center">A passionate software developer from Nepal 🇳🇵</h3>
 
 <p align="left">
   <img src="https://images.squarespace-cdn.com/content/v1/56af9236b6aa60cdf1c52b4b/1464950341113-VN4PQR9DU6LSKDIVHPGI/image-asset.gif" alt="coding" />
