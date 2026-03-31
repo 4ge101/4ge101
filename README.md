@@ -11,7 +11,7 @@
 
 - 🔭 I’m currently working on **Embedded Systems**
 - 🌱 I’m currently learning **Rust**
-- 👨‍💻 All of my projects are available at  
+- 👨‍💻 All of my projects are available at
   🌐 https:/AlixSami.com/
 - 📫 Reach me at **contact@AlixSami.com**
 - ⚡ Fun fact: I am just 14
