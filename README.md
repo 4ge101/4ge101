@@ -15,7 +15,7 @@
   🌐 https:/AlixSami.com/
 - 📫 Reach me at **contact@AlixSami.com**
 - ⚡ Fun fact: I am just 14
-- ♟️ My Favourite game is: Chess and Fun fact I can predeict your moves
+- ♟️ My Favourite game is: Chess and Fun fact. I can predeict your moves
 
 ---
 
