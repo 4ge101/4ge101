@@ -1,4 +1,4 @@
-<img width="100%" src="https://i.redd.it/utftm2yoj9mg1.gif" alt="gif">
+<img width="100%" height="80%" src="https://i.redd.it/utftm2yoj9mg1.gif" alt="gif">
 
 <h1 align="center">Hi 👋, I'm Ali Sami</h1>
 <h3 align="center">A passionate software developer from Nepal 🇳🇵</h3>
