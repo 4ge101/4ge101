@@ -11,7 +11,7 @@
 
 
 # 💫 About Me:
- I’m currently working on Embedded Systems<br> I’m currently learning Rust<br> All of my projects are available at  https:/AlixSami.com/<br> Reach me at contact@AlixSami.com<br> Fun fact: I am just 14<br> My Favourite game is: Chess and Fun fact. I can predeict your moves
+ I’m currently working on Embedded Systems<br> I’m currently learning Rust<br> All of my projects are available at  https:/AlixSami.com/<br> Reach me at contact@AlixSami.com<br> Fun fact: I am just 15<br> My Favourite game is: Chess and. I can predeict your moves
 
 
 ## 🌐 Socials:
