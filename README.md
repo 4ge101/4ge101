@@ -1,4 +1,4 @@
-<img width="100%" src="https://www.google.com/url?sa=t&source=web&rct=j&url=https%3A%2F%2Fgifs.alphacoders.com%2Fgifs%2Fview%2F220455&ved=0CBcQjRxqGAoTCKD13q3coJcDFQAAAAAdAAAAABCEAQ&opi=89978449" alt="gif">
+<img width="100%" src="https://giffiles.alphacoders.com/220/220455.gif" alt="gif">
 
 <h1 align="center">Hi 👋, I'm Ali Sami</h1>
 <h3 align="center">A passionate software developer from Nepal 🇳🇵</h3>
