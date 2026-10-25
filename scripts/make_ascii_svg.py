@@ -63,28 +63,55 @@ for y in range(rows):
     lines.append(s.rstrip())
 
 # ---------- svg ----------
+USER = "4ge101"                 # <-- your username (shows as sami@github)
+NAME = "Ali Sami"                 # <-- your name (shows after whoami)
+
 PAD = 14
+TITLE_H = 28
+FOOT_H = 30
 W = round(COLS * CW + PAD * 2)
-H = round(rows * CH + PAD * 2)
+H = round(TITLE_H + PAD + rows * CH + PAD + FOOT_H)
+
 body = []
 for i, s in enumerate(lines):
     if not s:
         continue
-    y = PAD + (i + 1) * CH - 2
+    y = TITLE_H + PAD + (i + 1) * CH - 2
     body.append(
         f'<text class="r" x="{PAD}" y="{y:.1f}" textLength="{len(s) * CW:.1f}" '
         f'lengthAdjust="spacing" xml:space="preserve" '
         f'style="animation-delay:{i * 0.04:.2f}s">{s}</text>'
     )
 
+# bottom prompt line, appears after the portrait has printed
+prompt = f"{USER}@github:~$ whoami "
+FF = 9                                   # footer font size
+foot_y = H - 12
+foot_delay = rows * 0.04 + 0.4
+cursor_x = PAD + (len(prompt) + len(NAME)) * FF * 0.6 + 2
+
 svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
 <style>
-  .r {{ font-family: ui-monospace, Menlo, Consolas, monospace; font-size: {FS}px;
-        fill: #c9d1d9; opacity: 0; animation: in 0.3s ease forwards; }}
+  text {{ font-family: ui-monospace, Menlo, Consolas, monospace; }}
+  .r {{ font-size: {FS}px; fill: #c9d1d9; opacity: 0; animation: in 0.3s ease forwards; }}
+  .ttl {{ font-size: 9px; fill: #6e7681; }}
+  .ft {{ font-size: {FF}px; fill: #8b949e; opacity: 0; animation: in 0.3s ease forwards; animation-delay: {foot_delay:.2f}s; }}
+  .ft tspan {{ fill: #f0f6fc; }}
+  .cur {{ fill: #f0f6fc; opacity: 0; animation: blink 1s steps(1) infinite; animation-delay: {foot_delay:.2f}s; }}
   @keyframes in {{ to {{ opacity: 1; }} }}
+  @keyframes blink {{ 0% {{ opacity: 1; }} 50% {{ opacity: 0; }} 100% {{ opacity: 1; }} }}
 </style>
 <rect width="{W}" height="{H}" rx="10" fill="#0d1117" stroke="#30363d"/>
+<rect width="{W}" height="{TITLE_H}" rx="10" fill="#161b22"/>
+<rect y="{TITLE_H - 10}" width="{W}" height="10" fill="#161b22"/>
+<circle cx="16" cy="14" r="4.5" fill="#ff5f56"/>
+<circle cx="32" cy="14" r="4.5" fill="#ffbd2e"/>
+<circle cx="48" cy="14" r="4.5" fill="#27c93f"/>
+<text x="{W / 2}" y="17" class="ttl" text-anchor="middle">{USER}@github: ~$ ./portrait.sh</text>
 {chr(10).join(body)}
+<line x1="0" y1="{H - FOOT_H}" x2="{W}" y2="{H - FOOT_H}" stroke="#21262d"/>
+<text x="{PAD}" y="{foot_y}" class="ft" xml:space="preserve">{prompt}<tspan>{NAME}</tspan></text>
+<rect class="cur" x="{cursor_x:.1f}" y="{foot_y - 9}" width="5" height="10"/>
 </svg>'''
 
 with open(OUT, "w", encoding="utf-8") as f:
