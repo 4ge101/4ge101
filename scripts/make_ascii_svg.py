@@ -6,7 +6,7 @@ from PIL import Image
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(HERE, "..", "source-cutout.png")
-OUT_NAME = "ascii.svg"                      # <-- must match your README
+OUT_NAME = "sami-ascii.svg"                      # <-- must match your README
 OUT = os.path.join(HERE, "..", OUT_NAME)
 
 COLS = 110
