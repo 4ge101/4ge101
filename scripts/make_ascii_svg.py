@@ -1,30 +1,68 @@
 import os
+
+import cv2
+import numpy as np
 from PIL import Image
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-SRC = os.path.join(HERE, "..", "source-prepped.png")
+SRC = os.path.join(HERE, "..", "source-cutout.png")
 OUT_NAME = "ascii.svg"                      # <-- must match your README
 OUT = os.path.join(HERE, "..", OUT_NAME)
 
 COLS = 110
-RAMP = " .:-=+*#%@"        # black = empty, bright = dense
+RAMP = " .:-=+*#%@"        # empty -> dense
 GAMMA = 0.8                # lower = denser face
 FS = 7                     # font size
-CW, CH = FS * 0.6, FS * 1.0  # character cell width / height
+CW, CH = FS * 0.6, FS * 1.0
+MARGIN = 20
 
-img = Image.open(SRC).convert("L")
-rows = round(COLS * img.height / img.width * CW / CH)
-img = img.resize((COLS, rows), Image.LANCZOS)
-px = img.load()
+# ---------- load cut-out: alpha is the mask ----------
+arr = np.array(Image.open(SRC).convert("RGBA"))
+alpha = arr[:, :, 3]
+gray = cv2.cvtColor(arr[:, :, :3], cv2.COLOR_RGB2GRAY)
+gray = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8)).apply(gray)
 
+mask = (alpha > 128).astype(np.uint8)
+mask = cv2.erode(mask, np.ones((5, 5), np.uint8))      # trim the edge halo
+
+# ---------- square crop around the subject ----------
+ys, xs = np.where(mask > 0)
+side = max(xs.max() - xs.min(), ys.max() - ys.min()) + MARGIN * 2
+cx, cy = (xs.min() + xs.max()) // 2, (ys.min() + ys.max()) // 2
+x0, y0 = cx - side // 2, cy - side // 2
+sx0, sy0 = max(x0, 0), max(y0, 0)
+sx1, sy1 = min(x0 + side, gray.shape[1]), min(y0 + side, gray.shape[0])
+
+g = np.zeros((side, side), np.uint8)
+m = np.zeros((side, side), np.uint8)
+g[sy0 - y0:sy1 - y0, sx0 - x0:sx1 - x0] = gray[sy0:sy1, sx0:sx1]
+m[sy0 - y0:sy1 - y0, sx0 - x0:sx1 - x0] = mask[sy0:sy1, sx0:sx1]
+
+# ---------- shrink to the character grid ----------
+rows = round(COLS * CW / CH)
+small = cv2.resize(g, (COLS, rows), interpolation=cv2.INTER_AREA).astype(np.float32)
+ms = cv2.resize(m.astype(np.float32), (COLS, rows), interpolation=cv2.INTER_AREA) > 0.5
+
+if ms.sum() > 50:
+    lo, hi = np.percentile(small[ms], [3, 99])
+    small = np.clip((small - lo) / (hi - lo + 1e-6), 0, 1)
+else:
+    small = small / 255.0
+
+# ---------- characters ----------
+n_r = len(RAMP)
 lines = []
 for y in range(rows):
     s = ""
     for x in range(COLS):
-        v = (px[x, y] / 255.0) ** GAMMA
-        s += RAMP[min(int(v * len(RAMP)), len(RAMP) - 1)]
+        if not ms[y, x]:
+            s += " "
+        else:
+            v = small[y, x] ** GAMMA
+            s += RAMP[min(int(v * n_r), n_r - 1)]
     lines.append(s.rstrip())
 
+# ---------- svg ----------
 PAD = 14
 W = round(COLS * CW + PAD * 2)
 H = round(rows * CH + PAD * 2)
