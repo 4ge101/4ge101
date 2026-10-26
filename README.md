@@ -23,7 +23,6 @@
 <a href="https://github.com/4ge101"><img src="https://img.shields.io/badge/GitHub-YOUR--USERNAME-0d1117?style=for-the-badge&logo=github&logoColor=white" /></a>
 <a href="https://linkedin.com/in/sami-ali-548272319"><img src="https://img.shields.io/badge/LinkedIn-YOUR--NAME-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
 <a href="https://www.instagram.com/4ge101_"><img src="https://img.shields.io/badge/Instagram-YOUR--HANDLE-E4405F?style=for-the-badge&logo=instagram&logoColor=white" /></a>
-
 <img src="https://img.shields.io/badge/Rust-000000?style=for-the-badge&logo=rust&logoColor=white" />
 <img src="https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black" />
 <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=git&logoColor=white" />
