@@ -7,18 +7,17 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(HERE, "..", "data", "contributions.json")
 OUT = os.path.join(HERE, "..", "contrib-heatmap.svg")
 
-# ---------- settings ----------
-HEROBRINE = True                 # False = Steve only
-TORCH = True                     # torch on the block (glows and flickers)
-DECOR = True                     # stars, moon, grass tufts and flowers
-S = 3.0                          # size of Steve and Herobrine
+HEROBRINE = True
+TORCH = True
+DECOR = True
+S = 3.0
 
 PALETTE = ["#161b22", "#0e4429", "#006d32", "#26a641", "#39d353"]
 CELL, GAP = 12, 2
 PITCH = CELL + GAP
 PAD = 20
 LEFT = 34
-SKY = 96                         # room above the grass
+SKY = 96
 MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
           "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 
@@ -29,7 +28,6 @@ CSS = """
 @keyframes pop { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
 """
 
-# ---------- load data ----------
 data = json.load(open(SRC))
 days = data["days"]
 first = date.fromisoformat(days[0]["date"])
@@ -60,7 +58,6 @@ weeks = max(col_first) + 1
 W = GX + weeks * PITCH + PAD
 H = GY + 7 * PITCH + 36
 
-# ---------- helpers ----------
 def R(x, y, w, h, c, extra=""):
     return f'<rect x="{x}" y="{y}" width="{w}" height="{h}" fill="{c}" {extra}/>'
 
@@ -75,7 +72,6 @@ SKIN, SKIN_D = "#c68863", "#b17a57"
 SHIRT, SHIRT_D = "#2fa5b5", "#278b99"
 HAIR = "#4a3321"
 
-# ---------- stone block in the middle (16 x 16 units) ----------
 def stone(x0, y0):
     out = [R(x0, y0, 16, 16, "#7d7d7d")]
     for dx, dy, w, h, c in [
@@ -85,7 +81,6 @@ def stone(x0, y0):
         (4, 9, 2, 2, "#4de3d0"), (10, 3, 2, 2, "#4de3d0"), (11, 9, 2, 2, "#c8fff7"),
     ]:
         out.append(R(x0 + dx, y0 + dy, w, h, c))
-    # diamond ore twinkles
     for dx, dy, dur in ((4, 9, 2.6), (10, 3, 3.4), (11, 9, 2.9)):
         out.append(
             f'<rect x="{x0 + dx}" y="{y0 + dy}" width="2" height="2" fill="#ffffff" opacity="0">'
@@ -121,12 +116,11 @@ def make_head(herobrine=False):
             f'{R(-1, -3, 2, 1, "#a8714f")}{R(-2, -2, 4, 1, "#7a4e36")}{R(-1, -1, 2, 1, "#7a4e36")}</g>')
 
 
-# ---------- one sitter (faces left, legs to the left, back toward the block) ----------
 def sitter(hero):
-    lean = 10 if hero else 14          # how far he leans back
-    tilt = -4 if hero else -8          # head tilt
-    arm = 16 if hero else 8            # how far the near arm swings out
-    breath = 3.9 if hero else 3.2      # seconds per breath
+    lean = 10 if hero else 14
+    tilt = -4 if hero else -8
+    arm = 16 if hero else 8
+    breath = 3.9 if hero else 3.2
     h = make_head(hero).replace("{HR}", str(tilt))
     return f'''
   {R(-17, 0, 27, 1.3, "#000000", 'opacity="0.28"')}
@@ -153,9 +147,9 @@ def sitter(hero):
   </g>'''
 
 
-BLOCK_X = 12                             # block spans BLOCK_X .. BLOCK_X + 16
-MIRROR = 2 * (BLOCK_X + 8)               # Herobrine sits on the opposite side
-CX = BLOCK_X + 8                         # block centre
+BLOCK_X = 12
+MIRROR = 2 * (BLOCK_X + 8)
+CX = BLOCK_X + 8
 
 scene = ""
 if TORCH:
@@ -172,25 +166,23 @@ if TORCH:
 scene += sitter(False)
 if HEROBRINE:
     scene += f'<g transform="translate({MIRROR},0) scale(-1,1)">{sitter(True)}</g>'
-    extent = MIRROR + 17                 # right end of Herobrine's legs
+    extent = MIRROR + 17
 else:
     extent = BLOCK_X + 16
 
 x0 = W - PAD - extent * S - 8
 scene_svg = f'<g transform="translate({x0:.1f},{GROUND}) scale({S})">{scene}</g>'
 
-# ---------- sky and grass decoration ----------
 decor = ""
 if DECOR:
     rnd = random.Random(11)
-    # moon (square, like in the game)
     mx, my = PAD + 56, PAD + 14
     decor += (f'<rect x="{mx}" y="{my}" width="22" height="22" fill="#e6ebf1"/>'
               f'<rect x="{mx + 4}" y="{my + 5}" width="5" height="5" fill="#cdd5de"/>'
               f'<rect x="{mx + 13}" y="{my + 11}" width="6" height="6" fill="#cdd5de"/>'
               f'<rect x="{mx + 5}" y="{my + 14}" width="4" height="4" fill="#d8dfe7"/>'
               f'<rect x="{mx}" y="{my + 20}" width="22" height="2" fill="#000000" opacity="0.12"/>')
-    # stars
+
     limit = x0 - 70
     for _ in range(26):
         sx_ = rnd.randint(PAD + 8, int(limit))
@@ -202,18 +194,17 @@ if DECOR:
         dur = round(rnd.uniform(2.2, 5.0), 1)
         decor += (f'<rect x="{sx_}" y="{sy_}" width="{size}" height="{size}" fill="#c9d1d9" opacity="{base}">'
                   f'{ANIM("opacity", f"{base};{min(base + 0.3, 1)};{base}", dur)}</rect>')
-    # grass tufts
+
     for _ in range(16):
         tx = rnd.randint(PAD + 6, int(x0 - 40))
         decor += (R(tx, GROUND - 3, 2, 3, "#4a8a30") + R(tx + 2, GROUND - 5, 2, 5, "#5aa33c")
                   + R(tx + 4, GROUND - 3, 2, 3, "#6dbb4a"))
-    # flowers
+
     for fx, petal in ((x0 - 120, "#d9453b"), (x0 - 215, "#f2d04a"), (x0 - 330, "#d9453b")):
         if fx > PAD + 20:
             decor += (R(fx, GROUND - 8, 1.6, 8, "#3f8f2f") + R(fx - 2, GROUND - 12, 5.6, 5, petal)
                       + R(fx - 0.2, GROUND - 10.5, 2, 2, "#f2d04a" if petal != "#f2d04a" else "#8a5a1e"))
 
-# ---------- labels ----------
 changes, prev = [], None
 for w in range(weeks):
     m = col_first[w].month
@@ -233,7 +224,6 @@ dow_txt = "".join(
 )
 footer = f"{total:,} contributions in the last year"
 
-# ---------- write the svg ----------
 svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{H}" viewBox="0 0 {W} {H}">
 <defs>
   <g id="bv">

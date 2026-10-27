@@ -6,26 +6,24 @@ from PIL import Image
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(HERE, "..", "source-cutout.png")
-OUT_NAME = "sami-ascii.svg"                      # <-- must match your README
+OUT_NAME = "sami-ascii.svg"
 OUT = os.path.join(HERE, "..", OUT_NAME)
 
 COLS = 110
-RAMP = " .:-=+*#%@"        # empty -> dense
-GAMMA = 0.8                # lower = denser face
-FS = 7                     # font size
+RAMP = " .:-=+*#%@" 
+GAMMA = 0.8 
+FS = 7
 CW, CH = FS * 0.6, FS * 1.0
 MARGIN = 20
 
-# ---------- load cut-out: alpha is the mask ----------
 arr = np.array(Image.open(SRC).convert("RGBA"))
 alpha = arr[:, :, 3]
 gray = cv2.cvtColor(arr[:, :, :3], cv2.COLOR_RGB2GRAY)
 gray = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8)).apply(gray)
 
 mask = (alpha > 128).astype(np.uint8)
-mask = cv2.erode(mask, np.ones((5, 5), np.uint8))      # trim the edge halo
+mask = cv2.erode(mask, np.ones((5, 5), np.uint8))
 
-# ---------- square crop around the subject ----------
 ys, xs = np.where(mask > 0)
 side = max(xs.max() - xs.min(), ys.max() - ys.min()) + MARGIN * 2
 cx, cy = (xs.min() + xs.max()) // 2, (ys.min() + ys.max()) // 2
@@ -38,7 +36,6 @@ m = np.zeros((side, side), np.uint8)
 g[sy0 - y0:sy1 - y0, sx0 - x0:sx1 - x0] = gray[sy0:sy1, sx0:sx1]
 m[sy0 - y0:sy1 - y0, sx0 - x0:sx1 - x0] = mask[sy0:sy1, sx0:sx1]
 
-# ---------- shrink to the character grid ----------
 rows = round(COLS * CW / CH)
 small = cv2.resize(g, (COLS, rows), interpolation=cv2.INTER_AREA).astype(np.float32)
 ms = cv2.resize(m.astype(np.float32), (COLS, rows), interpolation=cv2.INTER_AREA) > 0.5
@@ -49,7 +46,6 @@ if ms.sum() > 50:
 else:
     small = small / 255.0
 
-# ---------- characters ----------
 n_r = len(RAMP)
 lines = []
 for y in range(rows):
@@ -62,9 +58,8 @@ for y in range(rows):
             s += RAMP[min(int(v * n_r), n_r - 1)]
     lines.append(s.rstrip())
 
-# ---------- svg ----------
-USER = "4ge101"                 # <-- your username (shows as sami@github)
-NAME = "Ali Sami"                 # <-- your name (shows after whoami)
+USER = "4ge101"
+NAME = "Ali Sami"
 
 PAD = 14
 TITLE_H = 28
@@ -83,9 +78,8 @@ for i, s in enumerate(lines):
         f'style="animation-delay:{i * 0.04:.2f}s">{s}</text>'
     )
 
-# bottom prompt line, appears after the portrait has printed
 prompt = f"{USER}@github:~$ whoami "
-FF = 9                                   # footer font size
+FF = 9
 foot_y = H - 12
 foot_delay = rows * 0.04 + 0.4
 cursor_x = PAD + (len(prompt) + len(NAME)) * FF * 0.6 + 2

@@ -5,7 +5,7 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
-USERNAME = "4ge101"   # <-- EDIT THIS
+USERNAME = "4ge101"
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, "..", "data", "contributions.json")
@@ -15,7 +15,6 @@ resp = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=30)
 resp.raise_for_status()
 soup = BeautifulSoup(resp.text, "html.parser")
 
-# the number of contributions lives in a separate <tool-tip> element
 counts = {}
 for tip in soup.find_all("tool-tip"):
     m = re.match(r"(\d+) contribution", tip.get_text(strip=True))

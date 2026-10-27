@@ -19,14 +19,12 @@ def fmt(iso):
     return f"{d:%b} {d.day}"
 
 
-# ---------- numbers ----------
 total = sum(counts)
 active = sum(1 for c in counts if c > 0)
 pct = round(100 * active / len(days))
 avg = total / active if active else 0
 best_i = max(range(len(counts)), key=lambda i: counts[i])
 
-# current streak (if today has nothing yet, start from yesterday)
 e = len(days) - 1
 if counts[e] == 0 and e > 0:
     e -= 1
@@ -36,7 +34,6 @@ while s >= 0 and counts[s] > 0:
 cur_len = e - s
 cur_range = f"{fmt(dates[s + 1])} – {fmt(dates[e])}" if cur_len else "no streak"
 
-# longest streak
 best_len, best_s, run, run_s = 0, 0, 0, 0
 for i, c in enumerate(counts):
     if c > 0:
@@ -50,7 +47,6 @@ for i, c in enumerate(counts):
 long_range = (f"{fmt(dates[best_s])} – {fmt(dates[best_s + best_len - 1])}"
               if best_len else "no streak")
 
-# monthly totals
 months = {}
 for d in days:
     months[d["date"][:7]] = months.get(d["date"][:7], 0) + d["count"]
@@ -58,7 +54,6 @@ month_keys = list(months)
 month_vals = [months[k] for k in month_keys]
 month_lbl = [date(int(k[:4]), int(k[5:]), 1).strftime("%b")[0] for k in month_keys]
 
-# ---------- layout ----------
 W, PAD, TITLE_H = 490, 14, 30
 TW, TH, GAP = (W - 2 * PAD - 10) // 2, 88, 10
 TOP = TITLE_H + 14
@@ -87,7 +82,6 @@ for i, (label, value, unit, sub, green) in enumerate(tiles):
     out.append(f'<text x="{x+14}" y="{y+77}" class="sub">{escape(sub)}</text>')
     out.append('</g>')
 
-# bar chart tile
 CY = TOP + 3 * (TH + GAP)
 CH = 160
 CW = W - 2 * PAD
