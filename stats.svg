@@ -27,9 +27,9 @@ text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
 <g class="f" style="animation-delay:0.2s">
 <rect x="14" y="44" width="226" height="88" rx="8" class="tile"/>
 <text x="28" y="68" class="lab">$ current streak</text>
-<text x="28" y="102" class="val g">7</text>
+<text x="28" y="102" class="val g">8</text>
 <text x="53" y="102" class="unit">days</text>
-<text x="28" y="121" class="sub">Oct 19 – Oct 25</text>
+<text x="28" y="121" class="sub">Oct 19 – Oct 26</text>
 </g>
 <g class="f" style="animation-delay:0.32s">
 <rect x="250" y="44" width="226" height="88" rx="8" class="tile"/>
@@ -41,26 +41,26 @@ text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
 <g class="f" style="animation-delay:0.44s">
 <rect x="14" y="142" width="226" height="88" rx="8" class="tile"/>
 <text x="28" y="166" class="lab">$ contributions</text>
-<text x="28" y="200" class="val">352</text>
+<text x="28" y="200" class="val">367</text>
 <text x="28" y="219" class="sub">in the last year</text>
 </g>
 <g class="f" style="animation-delay:0.56s">
 <rect x="250" y="142" width="226" height="88" rx="8" class="tile"/>
 <text x="264" y="166" class="lab">$ active days</text>
-<text x="264" y="200" class="val">185</text>
-<text x="323" y="200" class="unit">/ 365</text>
+<text x="264" y="200" class="val">186</text>
+<text x="323" y="200" class="unit">/ 366</text>
 <text x="264" y="219" class="sub">51% of the year</text>
 </g>
 <g class="f" style="animation-delay:0.68s">
 <rect x="14" y="240" width="226" height="88" rx="8" class="tile"/>
 <text x="28" y="264" class="lab">$ best day</text>
-<text x="28" y="298" class="val">11</text>
-<text x="28" y="317" class="sub">Oct 4</text>
+<text x="28" y="298" class="val">15</text>
+<text x="28" y="317" class="sub">Oct 26</text>
 </g>
 <g class="f" style="animation-delay:0.8s">
 <rect x="250" y="240" width="226" height="88" rx="8" class="tile"/>
 <text x="264" y="264" class="lab">$ avg / active day</text>
-<text x="264" y="298" class="val">1.9</text>
+<text x="264" y="298" class="val">2.0</text>
 <text x="264" y="317" class="sub">contributions</text>
 </g>
 <g class="f" style="animation-delay:1s">
@@ -91,7 +91,7 @@ text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
 <text x="378.5" y="488" class="mon" text-anchor="middle">A</text>
 <rect class="bar" x="401.9" y="461.6" width="20" height="10.4" rx="2" style="animation-delay:1.76s"/>
 <text x="411.9" y="488" class="mon" text-anchor="middle">S</text>
-<rect class="bar" x="435.3" y="405.6" width="20" height="66.4" rx="2" style="animation-delay:1.82s"/>
+<rect class="bar" x="435.3" y="390.1" width="20" height="81.9" rx="2" style="animation-delay:1.82s"/>
 <text x="445.3" y="488" class="mon" text-anchor="middle">O</text>
 </g>
 </svg>
