@@ -27,9 +27,9 @@ text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
 <g class="f" style="animation-delay:0.2s">
 <rect x="14" y="44" width="226" height="88" rx="8" class="tile"/>
 <text x="28" y="68" class="lab">$ current streak</text>
-<text x="28" y="102" class="val g">9</text>
-<text x="53" y="102" class="unit">days</text>
-<text x="28" y="121" class="sub">Oct 19 – Oct 27</text>
+<text x="28" y="102" class="val g">10</text>
+<text x="70" y="102" class="unit">days</text>
+<text x="28" y="121" class="sub">Oct 19 – Oct 28</text>
 </g>
 <g class="f" style="animation-delay:0.32s">
 <rect x="250" y="44" width="226" height="88" rx="8" class="tile"/>
@@ -41,14 +41,14 @@ text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
 <g class="f" style="animation-delay:0.44s">
 <rect x="14" y="142" width="226" height="88" rx="8" class="tile"/>
 <text x="28" y="166" class="lab">$ contributions</text>
-<text x="28" y="200" class="val">376</text>
+<text x="28" y="200" class="val">378</text>
 <text x="28" y="219" class="sub">in the last year</text>
 </g>
 <g class="f" style="animation-delay:0.56s">
 <rect x="250" y="142" width="226" height="88" rx="8" class="tile"/>
 <text x="264" y="166" class="lab">$ active days</text>
-<text x="264" y="200" class="val">187</text>
-<text x="323" y="200" class="unit">/ 367</text>
+<text x="264" y="200" class="val">188</text>
+<text x="323" y="200" class="unit">/ 368</text>
 <text x="264" y="219" class="sub">51% of the year</text>
 </g>
 <g class="f" style="animation-delay:0.68s">
@@ -68,30 +68,30 @@ text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
 <text x="28" y="362" class="lab">$ contributions / month</text>
 <rect class="bar" x="34.7" y="470.0" width="20" height="2.0" rx="2" style="animation-delay:1.10s"/>
 <text x="44.7" y="488" class="mon" text-anchor="middle">O</text>
-<rect class="bar" x="68.1" y="451.0" width="20" height="21.0" rx="2" style="animation-delay:1.16s"/>
+<rect class="bar" x="68.1" y="451.5" width="20" height="20.5" rx="2" style="animation-delay:1.16s"/>
 <text x="78.1" y="488" class="mon" text-anchor="middle">N</text>
-<rect class="bar" x="101.5" y="458.6" width="20" height="13.4" rx="2" style="animation-delay:1.22s"/>
+<rect class="bar" x="101.5" y="458.9" width="20" height="13.1" rx="2" style="animation-delay:1.22s"/>
 <text x="111.5" y="488" class="mon" text-anchor="middle">D</text>
-<rect class="bar" x="134.8" y="460.5" width="20" height="11.5" rx="2" style="animation-delay:1.28s"/>
+<rect class="bar" x="134.8" y="460.8" width="20" height="11.2" rx="2" style="animation-delay:1.28s"/>
 <text x="144.8" y="488" class="mon" text-anchor="middle">J</text>
-<rect class="bar" x="168.2" y="433.8" width="20" height="38.2" rx="2" style="animation-delay:1.34s"/>
+<rect class="bar" x="168.2" y="434.7" width="20" height="37.3" rx="2" style="animation-delay:1.34s"/>
 <text x="178.2" y="488" class="mon" text-anchor="middle">F</text>
-<rect class="bar" x="201.6" y="394.7" width="20" height="77.3" rx="2" style="animation-delay:1.40s"/>
+<rect class="bar" x="201.6" y="396.4" width="20" height="75.6" rx="2" style="animation-delay:1.40s"/>
 <text x="211.6" y="488" class="mon" text-anchor="middle">M</text>
-<rect class="bar" x="235.0" y="424.3" width="20" height="47.7" rx="2" style="animation-delay:1.46s"/>
+<rect class="bar" x="235.0" y="425.3" width="20" height="46.7" rx="2" style="animation-delay:1.46s"/>
 <text x="245.0" y="488" class="mon" text-anchor="middle">A</text>
-<rect class="bar" x="268.4" y="440.5" width="20" height="31.5" rx="2" style="animation-delay:1.52s"/>
+<rect class="bar" x="268.4" y="441.2" width="20" height="30.8" rx="2" style="animation-delay:1.52s"/>
 <text x="278.4" y="488" class="mon" text-anchor="middle">M</text>
-<rect class="bar" x="301.8" y="453.9" width="20" height="18.1" rx="2" style="animation-delay:1.58s"/>
+<rect class="bar" x="301.8" y="454.3" width="20" height="17.7" rx="2" style="animation-delay:1.58s"/>
 <text x="311.8" y="488" class="mon" text-anchor="middle">J</text>
 <rect class="bar" x="335.2" y="470.0" width="20" height="2.0" rx="2" style="animation-delay:1.64s"/>
 <text x="345.2" y="488" class="mon" text-anchor="middle">J</text>
-<rect class="bar" x="368.5" y="466.3" width="20" height="5.7" rx="2" style="animation-delay:1.70s"/>
+<rect class="bar" x="368.5" y="466.4" width="20" height="5.6" rx="2" style="animation-delay:1.70s"/>
 <text x="378.5" y="488" class="mon" text-anchor="middle">A</text>
-<rect class="bar" x="401.9" y="462.5" width="20" height="9.5" rx="2" style="animation-delay:1.76s"/>
+<rect class="bar" x="401.9" y="462.7" width="20" height="9.3" rx="2" style="animation-delay:1.76s"/>
 <text x="411.9" y="488" class="mon" text-anchor="middle">S</text>
 <rect class="bar top" x="435.3" y="388.0" width="20" height="84.0" rx="2" style="animation-delay:1.82s"/>
-<text x="445.3" y="382.0" class="peak" text-anchor="middle">88</text>
+<text x="445.3" y="382.0" class="peak" text-anchor="middle">90</text>
 <text x="445.3" y="488" class="mon" text-anchor="middle">O</text>
 </g>
 </svg>
