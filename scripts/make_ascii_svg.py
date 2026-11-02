@@ -6,39 +6,36 @@ from PIL import Image
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(HERE, "..", "source-cutout.png")
-OUT_NAME = "sami-ascii.svg"                 # <-- must match your README
+OUT_NAME = "sami-ascii.svg"
 OUT = os.path.join(HERE, "..", OUT_NAME)
 
 COLS = 110
-RAMP = " .:-=+*#%@"        # empty -> dense
-GAMMA = 0.8                # lower = denser face
-FS = 7                     # font size
+RAMP = " .:-=+*#%@"
+GAMMA = 0.8
+FS = 7
 CW, CH = FS * 0.6, FS * 1.0
 MARGIN = 20
 
-# ---------- animation settings ----------
-TOTAL_TIME = 2.5       # seconds the whole portrait takes to draw (smaller = faster)
-ROW_GAP = 0.012        # seconds the cursor takes to glide to the next row
-ROW_START = 0.3        # seconds before drawing starts
-CURSOR = "#ffffff"     # pointer fill colour
-CURSOR_EDGE = "#0d1117"  # pointer outline colour
-CURSOR_SIZE = 0.4      # pointer size (1.0 = normal, 1.5 = bigger)
+TOTAL_TIME = 2.5
+ROW_GAP = 0.012
+ROW_START = 0.3
+CURSOR = "#ffffff"
+CURSOR_EDGE = "#0d1117"
+CURSOR_SIZE = 0.4
 
-USER = "sami"                 # <-- your username (shows as sami@github)
-NAME = "Sami"                 # <-- your name (shows after whoami)
+USER = "sami"
+NAME = "Sami"
 
-STATIC = os.environ.get("STATIC") == "1"   # STATIC=1 -> finished picture, no animation (preview)
+STATIC = os.environ.get("STATIC") == "1"
 
-# ---------- load cut-out: alpha is the mask ----------
 arr = np.array(Image.open(SRC).convert("RGBA"))
 alpha = arr[:, :, 3]
 gray = cv2.cvtColor(arr[:, :, :3], cv2.COLOR_RGB2GRAY)
 gray = cv2.createCLAHE(clipLimit=2.0, tileGridSize=(8, 8)).apply(gray)
 
 mask = (alpha > 128).astype(np.uint8)
-mask = cv2.erode(mask, np.ones((5, 5), np.uint8))      # trim the edge halo
+mask = cv2.erode(mask, np.ones((5, 5), np.uint8))
 
-# ---------- square crop around the subject ----------
 ys, xs = np.where(mask > 0)
 side = max(xs.max() - xs.min(), ys.max() - ys.min()) + MARGIN * 2
 cx, cy = (xs.min() + xs.max()) // 2, (ys.min() + ys.max()) // 2
@@ -51,7 +48,6 @@ m = np.zeros((side, side), np.uint8)
 g[sy0 - y0:sy1 - y0, sx0 - x0:sx1 - x0] = gray[sy0:sy1, sx0:sx1]
 m[sy0 - y0:sy1 - y0, sx0 - x0:sx1 - x0] = mask[sy0:sy1, sx0:sx1]
 
-# ---------- shrink to the character grid ----------
 rows = round(COLS * CW / CH)
 small = cv2.resize(g, (COLS, rows), interpolation=cv2.INTER_AREA).astype(np.float32)
 ms = cv2.resize(m.astype(np.float32), (COLS, rows), interpolation=cv2.INTER_AREA) > 0.5
@@ -62,7 +58,6 @@ if ms.sum() > 50:
 else:
     small = small / 255.0
 
-# ---------- characters ----------
 n_r = len(RAMP)
 lines = []
 for y in range(rows):
@@ -75,16 +70,14 @@ for y in range(rows):
             s += RAMP[min(int(v * n_r), n_r - 1)]
     lines.append(s.rstrip())
 
-# ---------- svg ----------
 PAD = 14
 TITLE_H = 28
 FOOT_H = 30
 W = round(COLS * CW + PAD * 2)
 H = round(TITLE_H + PAD + rows * CH + PAD + FOOT_H)
-FF = 9                                   # footer font size
-FW = FF * 0.6                            # footer character width
+FF = 9
+FW = FF * 0.6
 
-# how many characters will be drawn in total (blank space at the start of a row is skipped)
 vis_total = sum(len(s.lstrip()) for s in lines if s.strip()) or 1
 per_char = TOTAL_TIME / vis_total
 
@@ -93,9 +86,9 @@ t = ROW_START
 for i, s in enumerate(lines):
     if not s.strip():
         continue
-    lead = len(s) - len(s.lstrip())              # blank characters before the art starts
-    n = len(s) - lead                            # characters that get drawn
-    xs_ = PAD + lead * CW                        # where drawing starts on this row
+    lead = len(s) - len(s.lstrip())
+    n = len(s) - lead
+    xs_ = PAD + lead * CW
     width = n * CW
     y = TITLE_H + PAD + (i + 1) * CH - 2
     begin = t
@@ -118,7 +111,6 @@ for i, s in enumerate(lines):
         f'<text class="r" x="{PAD}" y="{y:.1f}" textLength="{len(s) * CW:.1f}" '
         f'lengthAdjust="spacing" xml:space="preserve" clip-path="url(#c{i})">{s}</text>'
     )
-    # the cursor path: start of this row -> end of this row
     path.append((begin, xs_, y - CH * 0.5))
     path.append((begin + dur, xs_ + width, y - CH * 0.5))
 
@@ -142,7 +134,6 @@ if not STATIC and path:
         f'</g></g>'
     )
 
-# ---------- bottom prompt line: types "whoami Name" after the portrait ----------
 prompt = f"{USER}@github:~$ whoami "
 full = prompt + NAME
 fwidth = len(full) * FW
