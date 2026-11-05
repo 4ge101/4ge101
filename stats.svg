@@ -27,9 +27,9 @@ text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
 <g class="f" style="animation-delay:0.2s">
 <rect x="14" y="44" width="226" height="88" rx="8" class="tile"/>
 <text x="28" y="68" class="lab">$ current streak</text>
-<text x="28" y="102" class="val g">17</text>
+<text x="28" y="102" class="val g">18</text>
 <text x="70" y="102" class="unit">days</text>
-<text x="28" y="121" class="sub">Oct 19 – Nov 4</text>
+<text x="28" y="121" class="sub">Oct 19 – Nov 5</text>
 </g>
 <g class="f" style="animation-delay:0.32s">
 <rect x="250" y="44" width="226" height="88" rx="8" class="tile"/>
@@ -41,15 +41,15 @@ text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
 <g class="f" style="animation-delay:0.44s">
 <rect x="14" y="142" width="226" height="88" rx="8" class="tile"/>
 <text x="28" y="166" class="lab">$ contributions</text>
-<text x="28" y="200" class="val">392</text>
+<text x="28" y="200" class="val">394</text>
 <text x="28" y="219" class="sub">in the last year</text>
 </g>
 <g class="f" style="animation-delay:0.56s">
 <rect x="250" y="142" width="226" height="88" rx="8" class="tile"/>
 <text x="264" y="166" class="lab">$ active days</text>
-<text x="264" y="200" class="val">193</text>
-<text x="323" y="200" class="unit">/ 368</text>
-<text x="264" y="219" class="sub">52% of the year</text>
+<text x="264" y="200" class="val">194</text>
+<text x="323" y="200" class="unit">/ 369</text>
+<text x="264" y="219" class="sub">53% of the year</text>
 </g>
 <g class="f" style="animation-delay:0.68s">
 <rect x="14" y="240" width="226" height="88" rx="8" class="tile"/>
@@ -91,7 +91,7 @@ text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
 <rect class="bar top" x="401.9" y="388.0" width="20" height="84.0" rx="2" style="animation-delay:1.76s"/>
 <text x="411.9" y="382.0" class="peak" text-anchor="middle">98</text>
 <text x="411.9" y="488" class="mon" text-anchor="middle">O</text>
-<rect class="bar" x="435.3" y="465.1" width="20" height="6.9" rx="2" style="animation-delay:1.82s"/>
+<rect class="bar" x="435.3" y="463.4" width="20" height="8.6" rx="2" style="animation-delay:1.82s"/>
 <text x="445.3" y="488" class="mon" text-anchor="middle">N</text>
 </g>
 </svg>
