@@ -27,9 +27,9 @@ text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
 <g class="f" style="animation-delay:0.2s">
 <rect x="14" y="44" width="226" height="88" rx="8" class="tile"/>
 <text x="28" y="68" class="lab">$ current streak</text>
-<text x="28" y="102" class="val g">19</text>
+<text x="28" y="102" class="val g">20</text>
 <text x="70" y="102" class="unit">days</text>
-<text x="28" y="121" class="sub">Oct 19 – Nov 6</text>
+<text x="28" y="121" class="sub">Oct 19 – Nov 7</text>
 </g>
 <g class="f" style="animation-delay:0.32s">
 <rect x="250" y="44" width="226" height="88" rx="8" class="tile"/>
@@ -41,14 +41,14 @@ text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
 <g class="f" style="animation-delay:0.44s">
 <rect x="14" y="142" width="226" height="88" rx="8" class="tile"/>
 <text x="28" y="166" class="lab">$ contributions</text>
-<text x="28" y="200" class="val">397</text>
+<text x="28" y="200" class="val">392</text>
 <text x="28" y="219" class="sub">in the last year</text>
 </g>
 <g class="f" style="animation-delay:0.56s">
 <rect x="250" y="142" width="226" height="88" rx="8" class="tile"/>
 <text x="264" y="166" class="lab">$ active days</text>
-<text x="264" y="200" class="val">195</text>
-<text x="323" y="200" class="unit">/ 371</text>
+<text x="264" y="200" class="val">192</text>
+<text x="323" y="200" class="unit">/ 365</text>
 <text x="264" y="219" class="sub">53% of the year</text>
 </g>
 <g class="f" style="animation-delay:0.68s">
@@ -66,7 +66,7 @@ text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
 <g class="f" style="animation-delay:1s">
 <rect x="14" y="338" width="462" height="160" rx="8" class="tile"/>
 <text x="28" y="362" class="lab">$ contributions / month</text>
-<rect class="bar" x="34.7" y="454.0" width="20" height="18.0" rx="2" style="animation-delay:1.10s"/>
+<rect class="bar" x="34.7" y="460.0" width="20" height="12.0" rx="2" style="animation-delay:1.10s"/>
 <text x="44.7" y="488" class="mon" text-anchor="middle">N</text>
 <rect class="bar" x="68.1" y="460.0" width="20" height="12.0" rx="2" style="animation-delay:1.16s"/>
 <text x="78.1" y="488" class="mon" text-anchor="middle">D</text>
@@ -91,7 +91,7 @@ text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
 <rect class="bar top" x="401.9" y="388.0" width="20" height="84.0" rx="2" style="animation-delay:1.76s"/>
 <text x="411.9" y="382.0" class="peak" text-anchor="middle">98</text>
 <text x="411.9" y="488" class="mon" text-anchor="middle">O</text>
-<rect class="bar" x="435.3" y="460.9" width="20" height="11.1" rx="2" style="animation-delay:1.82s"/>
+<rect class="bar" x="435.3" y="459.1" width="20" height="12.9" rx="2" style="animation-delay:1.82s"/>
 <text x="445.3" y="488" class="mon" text-anchor="middle">N</text>
 </g>
 </svg>
