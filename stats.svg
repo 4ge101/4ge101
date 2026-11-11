@@ -41,14 +41,14 @@ text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
 <g class="f" style="animation-delay:0.44s">
 <rect x="14" y="142" width="226" height="88" rx="8" class="tile"/>
 <text x="28" y="166" class="lab">$ contributions</text>
-<text x="28" y="200" class="val">398</text>
+<text x="28" y="200" class="val">399</text>
 <text x="28" y="219" class="sub">in the last year</text>
 </g>
 <g class="f" style="animation-delay:0.56s">
 <rect x="250" y="142" width="226" height="88" rx="8" class="tile"/>
 <text x="264" y="166" class="lab">$ active days</text>
 <text x="264" y="200" class="val">195</text>
-<text x="323" y="200" class="unit">/ 367</text>
+<text x="323" y="200" class="unit">/ 368</text>
 <text x="264" y="219" class="sub">53% of the year</text>
 </g>
 <g class="f" style="animation-delay:0.68s">
@@ -91,7 +91,7 @@ text { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
 <rect class="bar top" x="401.9" y="388.0" width="20" height="84.0" rx="2" style="animation-delay:1.76s"/>
 <text x="411.9" y="382.0" class="peak" text-anchor="middle">98</text>
 <text x="411.9" y="488" class="mon" text-anchor="middle">O</text>
-<rect class="bar" x="435.3" y="454.0" width="20" height="18.0" rx="2" style="animation-delay:1.82s"/>
+<rect class="bar" x="435.3" y="453.1" width="20" height="18.9" rx="2" style="animation-delay:1.82s"/>
 <text x="445.3" y="488" class="mon" text-anchor="middle">N</text>
 </g>
 </svg>
